@@ -1,6 +1,6 @@
 "use client"; // ✅ Requerido en Next.js para componentes interactivos
 import React from "react";
-import { Typography } from "@/ui";
+import { Typography } from "./ui";
 
 // 🎯 Task recibe como props una tarea task y una función de toggleComplete para cambiar el estado a completado
 const Task = ({ task, toggleComplete }) => {

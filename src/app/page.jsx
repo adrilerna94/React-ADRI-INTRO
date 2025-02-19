@@ -9,9 +9,10 @@
    ✅ No es necesario importarlo en `App.jsx`, Next.js lo maneja solo.
    ✅ Puede incluir UI, botones y llamadas a API.
 */
-
+"use client"; // evitar hidration error
 import { Button, Card, CardBody, Typography } from "@/app/components/ui";
 import { WelcomeMessage } from "./components/WelcomeMessage";
+import { TaskList } from "./components/TaskList";
 
 /* 🏠 Componente Home - Página de bienvenida */
 export default function Home() {
@@ -40,7 +41,7 @@ export default function Home() {
                         Fecha estimada de lanzamiento: 15 de julio de 2030.
                         </Typography>
                     </div>
-
+                    <TaskList /> {/*📝 Renderiza TaskList*/ }
                     {/* 🎯 Botón de acción */}
                     <Button color="amber" size="lg" className="mt-1">
                         Unirse a la Misión
