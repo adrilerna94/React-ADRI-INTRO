@@ -2,7 +2,6 @@
 🏠 page.jsx - Página principal de la aplicación 
 🏘️ home.jsx - Equivalente a React puro
 */
-
 // --------------------------------------------------------------- */
 /* 📌 Este archivo representa la página de inicio (/).   
    ✅ En Next.js, `page.jsx` define automáticamente una ruta.
@@ -16,11 +15,12 @@ import { TaskList } from "./components/TaskList";
 
 /* 🏠 Componente Home - Página de bienvenida */
 export default function Home() {
+    const names = ['Ada lovelace', 'Bill Clinton', 'Elon Musk'];
     return (
         <main className="flex flex-col items-center min-h-screen justify-center bg-gray-900 text-white p-6 gap-6">
             
             {/*✅ Componente Welcome reutilizable*/ }
-            <WelcomeMessage name="Adri" />
+            <WelcomeMessage names={names} />
             
             {/* 📂 Contenedor principal con Card*/}
             <Card className="w-full max-w-lg shadow-xl border border-gray-700 bg-gray-800">
